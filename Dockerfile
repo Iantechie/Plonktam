@@ -17,11 +17,9 @@ COPY . /app/
 
 RUN pip3 install -r requirements.txt
 
-
-
 EXPOSE 8000
 
-RUN python manage.py collectstatic
+# RUN python manage.py collectstatic
 
 RUN python manage.py migrate
 
