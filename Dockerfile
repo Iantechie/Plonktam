@@ -13,9 +13,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 RUN pip install --upgrade pip
 
-RUN pip install -r requirements.txt
-
 COPY . /app/
+
+RUN pip3 install -r requirements.txt
+
+
 
 EXPOSE 8000
 
