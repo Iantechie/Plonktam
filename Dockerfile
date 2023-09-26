@@ -23,5 +23,5 @@ EXPOSE 8000
 
 RUN python manage.py migrate
 
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "Plonktam.wsgi:application"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "core.wsgi:application"]
 
