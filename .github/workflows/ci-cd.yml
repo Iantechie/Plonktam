@@ -41,4 +41,4 @@ jobs:
            build-args: |
             REQUIREMENTS_FILE=./requirements.txt 
            push: true
-           tags: ${{ secrets.DOCKER_USERNAME }}/plonktam:${{ steps.versioning.outputs.tag }}
+           tags: ${{ secrets.DOCKER_USERNAME }}/plonktam:${{ steps.increment_tag.outputs.tag }}
