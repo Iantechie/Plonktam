@@ -22,12 +22,8 @@ jobs:
 
       - name: Increment the tag
         id: increment_tag
-        # run: echo ::set-output name=tag::$(python3 versioning.py ${{ steps.get_tag.outputs.tag }})
-        run: |
-            current_tag="${{ steps.get_tag.outputs.tag }}"
-            new_version=$(python3 versioning.py "$current_tag")
-            echo "::set-output name=tag::$new_version"
-            
+        run: echo ::set-output name=tag::$(python3 versioning.py ${{ steps.get_tag.outputs.tag }})
+
       - name: Debug - Print Incremented Tag
         run: echo ${{ steps.increment_tag.outputs.tag }}
 
