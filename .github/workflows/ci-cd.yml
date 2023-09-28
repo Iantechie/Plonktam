@@ -27,6 +27,7 @@ jobs:
             current_tag="${{ steps.get_tag.outputs.tag }}"
             new_version=$(python3 versioning.py "$current_tag")
             echo "::set-output name=tag::$new_version"
+            
       - name: Debug - Print Incremented Tag
         run: echo ${{ steps.increment_tag.outputs.tag }}
 
