@@ -23,7 +23,6 @@
 
   <!-- Template Main CSS File -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
-
 </head>
 
 <body>
@@ -68,41 +67,14 @@
           <span>Error 404</span>
         </a>
       </li><!-- End Error 404 Page Nav -->
-
-
     </ul>
 
   </aside><!-- End Sidebar-->
 
   <main id="main" class="main">
+    {% block content %}
 
-    <div class="pagetitle">
-      <h1>Dashboard</h1>
-      <nav>
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
-          <li class="breadcrumb-item active">Dashboard</li>
-        </ol>
-      </nav>
-    </div><!-- End Page Title -->
-
-    <section class="section dashboard">
-      <div class="row">
-        <div class="col-md-6"><div class="card">
-          <h5 class="card-title">Test Page</h5>
-          <div class="card-body">Test....</div>
-        </div>
-      </div>
-        <div class="col-md-6">
-          <div class="card">
-          <h5 class="card-title">Test Page</h5>
-          <div class="card-body">Test....</div>
-        </div>
-        </div>
-        
-      </div>
-    </section>
-
+    {% endblock %}
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -111,7 +83,7 @@
       &copy; Copyright <strong><span>Plonktam</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
-      Developed by <a href="#">Iantechie</a>
+      Developed by <a class="text-black" href="#">Iantechie</a>
     </div>
   </footer><!-- End Footer -->
 
@@ -120,9 +92,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
-  <!-- Vendor JS Files -->
  
-
+  <!-- Vendor JS Files -->
   <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
   <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
