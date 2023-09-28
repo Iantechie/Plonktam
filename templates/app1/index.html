@@ -1,1 +1,33 @@
 {% extends 'base.html'%}
+{% load static %}
+{% block content %}
+    <div class="pagetitle">
+      
+      <h1>Dashboard</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active">Dashboard</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+
+    <section class="section dashboard">
+    <div class="row">
+        {% for data in list_data %}
+        <div class="col-md-4 mb-1 d-flex justify-content-center">
+          <div class="card">
+            <img class="image-responsive" src="{{ data.image.url }}" style="height: 200px;" class="card-img-top" alt="image">
+            <div class="card-body">
+              <h5 class="card-title"> {{data.title | title}}</h5>
+              <p class="card-text">{{data.description}}</p>
+              <a href="#" class=" text-center btn btn-sm btn-outline-success">Get service</a>
+            </div>
+         </div>
+        </div>
+        {% endfor %}
+    </div>
+    </section>
+
+{% endblock %}
