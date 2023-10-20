@@ -117,7 +117,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # 'media' directory to store uploa
 #     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 # ]
 
-
+AUTH_USER_MODEL = 'app1.CustomUser'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
