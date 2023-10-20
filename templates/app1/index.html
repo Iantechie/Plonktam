@@ -18,11 +18,11 @@
         {% for data in list_data %}
         <div class="col-md-4 mb-1 d-flex justify-content-center">
           <div class="card">
-            <img class="image-responsive" src="{{ data.image.url }}" style="height: 200px;" class="card-img-top" alt="image">
+            <img class="image-responsive" src="{{ data.image.url }}" style="width:300px;height: 200px;" class="card-img-top" alt="image">
             <div class="card-body">
               <h5 class="card-title"> {{data.title | title}}</h5>
               <p class="card-text">{{data.description}}</p>
-              <a href="#" class=" text-center btn btn-sm btn-outline-success">Get service</a>
+              <a href="{% url 'app1:cover_detail' data.id %}" class=" text-center btn btn-sm btn-outline-success">Get service</a>
             </div>
          </div>
         </div>
